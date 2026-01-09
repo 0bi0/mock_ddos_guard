@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mock DDoS Guard</title>
+  <link rel="stylesheet" href="/static/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Mock DDoS Guard</h1>
+
+    <div id="status" class="status normal">Status: Stable</div>
+
+    <div class="card">
+      <h2>Live Traffic</h2>
+      <pre id="traffic">Waiting for data...</pre>
+    </div>
+
+    <div class="card">
+      <h2>Traffic Graph</h2>
+      <canvas id="trafficChart"></canvas>
+    </div>
+
+    <button id="attackBtn" onclick="toggleAttack()">Start Attack</button>
+    <button id="defenceBtn" onclick="toggleDefences()">Enable Defences</button>
+    
+  </div>
+
+  <script src="/static/app.js?v=1"></script>
+
+
+</body>
+</html>
