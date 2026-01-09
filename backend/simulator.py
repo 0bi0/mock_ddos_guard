@@ -11,6 +11,7 @@ def random_ip():
     return ".".join(str(random.randint(1, 254)) for _ in range(4))
 
 
+# Traffic generator (Mock traffic of course xD)
 def generate_traffic(attack=False, mitigated=False):
     if attack:
         base_rps = random.randint(3000, 8000)
@@ -19,7 +20,6 @@ def generate_traffic(attack=False, mitigated=False):
         base_rps = random.randint(20, 120)
         country = random.choice(COUNTRIES)
 
-    # DEFENCES REDUCE IMPACT
     if mitigated and attack:
         base_rps = int(base_rps * random.uniform(0.2, 0.4))
 
@@ -31,3 +31,4 @@ def generate_traffic(attack=False, mitigated=False):
         country=country,
         asn=random.choice(ASNS)
     )
+
