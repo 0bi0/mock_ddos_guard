@@ -1,7 +1,6 @@
 from models import TrafficEvent, AttackAlert
 from datetime import datetime
-
-
+
 def analyze_event(event: TrafficEvent, mitigated: bool):
     if event.requests_per_second > 2000:
         return AttackAlert(
