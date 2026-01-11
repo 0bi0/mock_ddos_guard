@@ -11,7 +11,7 @@ app = FastAPI(title="Mock DDoS Guard")
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# 🔥 GLOBAL SIMULATION STATE
+# Global simulation state
 IS_ATTACKING = False
 DEFENCES_ENABLED = False
 LAST_EVENT = 0
